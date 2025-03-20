@@ -4,7 +4,7 @@ class CharacterCard extends React.Component {
     render(){
         const { character : {name, image, status}} = this.props
         return(
-            <article className='card'>
+            <article className='card' data-testid="character-card">
                 <img alt={name} src={image} />
                 <h3 className='card-name'>{name}</h3>
                 <p className='card-status'>{status}</p>

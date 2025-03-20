@@ -47,20 +47,8 @@ class App extends React.Component {
   }
 
   handleOnClickFilterStatus = ({target}) => {
-    const statusCharacter = target.innerText;
+    const statusCharacter = target.textContent;
     this.setState({ statusCharacter });
-    // this.setState(
-    //   (prevState) => ({
-    //     filteredCharacters: prevState.search === "" ? prevState.characters : prevState.filteredCharacters,
-    //   }),
-    //   () => {
-    //     this.setState((prevState) => ({
-    //       filteredCharacters: prevState.filteredCharacters.filter(
-    //         ({ status }) => status.toLowerCase() === statusCharacter.toLowerCase()
-    //       ),
-    //     }));
-    //   }
-    // );
   }
 
   handleOnClickResetFilter = () => {
@@ -80,7 +68,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <form>
-          <input type='text' placeholder='Search Character...' onChange={this.handleOnChange}/>
+          <input type='text' data-testid="inputSearch" placeholder='Search Character...' onChange={this.handleOnChange}/>
           <button type='button' onClick={this.handleFilterCharacters}>Buscar</button>
         </form>
         <div className='containerStatus'>
@@ -96,7 +84,7 @@ class App extends React.Component {
               statusCharacter === "" ? filteredCharacters.map(item=> <div className='container-cards' onClick={() => this.openModal(item)}>
                 <CharacterCard  character={item} key={Math.random()} />
               </div>) :
-              filteredCharacters.filter(({status})=> status.toLowerCase() === statusCharacter.toLowerCase()).map(item=> <div className='container-cards' onClick={() => this.openModal(item)}>
+              filteredCharacters.filter(({status})=> statusCharacter && status.toLowerCase() === statusCharacter.toLowerCase()).map(item=> <div className='container-cards' onClick={() => this.openModal(item)}>
                 <CharacterCard character={item} key={Math.random()} />
               </div>)
             }
