@@ -25,6 +25,7 @@
 ## Como parar a aplicação em container Docker:
 
 1. Na raiz da aplicação executar o comando:
+
    ```bash
    docker stop project-rickandmorty
    ```
@@ -34,6 +35,7 @@
 ## Como executar a aplicação diretamente do projeto:
 
 1. Na raiz da aplicação executar o comando:
+
    ```bash
    npm start
    ```
@@ -43,6 +45,7 @@
 ## Como executar os testes da aplicação:
 
 1. Na raiz da aplicação executar o comando:
+
    ```bash
    npm test
    ```
