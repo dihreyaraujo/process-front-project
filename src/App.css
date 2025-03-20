@@ -1,0 +1,75 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-cards{
+  max-width: 350px;
+  width: 100%;
+  margin: 2rem 0;
+  cursor: pointer;
+}
+
+.App{
+  width: 100vw;
+  height: 100vh;
+}
+
+input[type=text]{
+  padding: 1rem;
+  width:70%;
+  font-size: 14px !important;
+}
+button {
+  background-color: #2d6a4f;
+  width: 30%;
+ padding: 1rem;
+ color: white;
+ cursor: pointer;
+}
+
+button:hover{
+  background-color: #40916c;
+}
+
+.card-list{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+form {
+  margin: 3rem auto 1rem auto;
+  width: 50%;
+}
+
+.containerStatus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.buttonStatus {
+  width: 110px;
+  height: 40px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  margin: 0px 5px;
+}
+
+.totalChar {
+  text-align: center;
+}
