@@ -15,7 +15,7 @@
 
 2. Após o build, ainda na raiz da aplicação executar o comando:
    ```bash
-   docker run -p 3000:3000 project-rickandmorty
+   docker run --name project-rickandmorty-container -d -p 3000:3000 project-rickandmorty
    ```
 
 3. Ir em seu navegador e acessar: [http://localhost:3000/](http://localhost:3000/)
@@ -27,7 +27,7 @@
 1. Na raiz da aplicação executar o comando:
 
    ```bash
-   docker stop project-rickandmorty
+   docker stop project-rickandmorty-container
    ```
 
 ---
